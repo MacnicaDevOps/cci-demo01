@@ -11,7 +11,7 @@ jobs:
           command: docker build -t $image .
       - run:
           name: login
-          command: docker login -u $user -p password 
+          command: docker login -u $user -p $password 
       - run:
           name: push
           command: docker push $image
