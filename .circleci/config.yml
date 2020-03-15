@@ -14,4 +14,4 @@ jobs:
           command: docker login -u $user -p password 
       - run:
           name: push
-          commamd: docker push $image
+          command: docker push $image
