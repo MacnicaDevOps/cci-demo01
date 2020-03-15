@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: macnicadevops/cci-build-aws:1.0
+    steps:
+      - checkout
+      - run: 
+          name: build
+          command: docker build -t $image .
+      - run:
+          name: login
+          command: docker login -u $user -p password 
+      - run:
+          name: push
+          commamd: docker push $image
