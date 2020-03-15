@@ -5,6 +5,7 @@ jobs:
       - image: macnicadevops/cci-build-aws:1.0
     steps:
       - checkout
+      - setup_remote_docker
       - run: 
           name: build
           command: docker build -t $image .
