@@ -1,3 +1,3 @@
-From nginx:1.17
+From nginx:mainline
 COPY index.html /usr/share/nginx/html/
 EXPOSE 80
